@@ -34,3 +34,16 @@ bot.on("message", message=>{
             break;
     }
 })
+
+//PROSEXE TI LES PITSIRIKO
+bot.on("message", message=>{
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[1, 2, 3, 4]){
+        case 'gamo tin mana sou':
+                const filos = new Attachment('./2.png')
+                message.channel.send(message.author, filos);
+            break;
+    }
+})
