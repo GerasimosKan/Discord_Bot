@@ -40,8 +40,8 @@ bot.on("message", message=>{
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    switch(args[1]){
-        case 'gamo tin mana sou':
+    switch(args[0]){
+        case 'gamo':
                 const filos = new Attachment('./2.png')
                 message.channel.send(message.author, filos);
             break;
