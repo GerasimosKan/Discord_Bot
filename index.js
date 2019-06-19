@@ -29,7 +29,7 @@ bot.on("message", message=>{
 
     switch(args[0]){
         case 'send':
-                const filos = new Attachment('https://i.imgur.com/32n7Fi8.png')
+                const filos = new Attachment('./1.png')
                 message.channel.send(message.author, filos);
             break;
     }
