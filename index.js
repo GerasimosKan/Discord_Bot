@@ -1,12 +1,12 @@
 const {Client, Attachment} = require("discord.js");
 const bot = new Client();
+const ytdl = require('ytdl-core');
 
 //TOKEN GIA BOT
 const token ="NTkwOTE4OTAzNzc4MjQ2NjU2.XQpnvA.XP-N5QBujlHi1tI_hqdTRNQoJJg";
-bot.login(token);
 
 //Start command
-const PREFIX = "!";
+const PREFIX = "";
 
 //Bot online
 bot.on("ready", ()=> {
@@ -19,6 +19,12 @@ bot.on('guildMemberAdd', member =>{
     if (!channel) return;
 
     channel.send(`Όπα καλωσόρισες ΨΑΡΑΚΛΑ ${member} πάνε καθάρισε τις καλλιόπες`)
+});
+
+//Permition
+bot.on('guildMemberAdd', function(member){
+    let Role= member.guild.roles.find("name", "ROOKIE");
+    member.addRole(Role);
 });
 
 
@@ -47,3 +53,39 @@ bot.on("message", message=>{
             break;
     }
 })
+
+//gay
+bot.on("message", message=>{
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[2]){
+        case 'gay':
+                message.channel.send("no u");
+        break;
+    }
+})
+
+//Fotoulis
+bot.on('message', message => {
+    // Voice only works in guilds, if the message does not come from a guild,
+    // we ignore it
+    if (!message.guild) return;
+  
+    if (message.content === 'fotoulis') {
+      // Only try to join the sender's voice channel if they are in one themselves
+      if (message.member.voiceChannel) {
+        message.member.voiceChannel.join()
+          .then(connection => { // Connection is an instance of VoiceConnection
+            message.channel.send('!play https://www.youtube.com/watch?v=bbJHFD3UBYM');
+          })
+          .catch(console.log);
+      } else {
+        message.reply('You need to join a voice channel first!');
+      }
+    }
+  });
+
+
+
+bot.login(token);
