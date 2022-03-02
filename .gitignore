@@ -128,3 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 private/config.py
+private/config.py
+MyID.jpg

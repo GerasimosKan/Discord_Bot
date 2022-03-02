@@ -20,13 +20,17 @@ class Welcome(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
-    async def on_member_join(self, member: discord.Member):
+    async def on_member_join(self, ctx):
         guild = member.guild
         channel = self.bot.get_channel(Channel)
         role = get(guild.roles, id=Role)
 
         img = Image.open('./images/id.jpg') #image
-        asset = member.avatar_url_as(size=512)
+        
+        author = ctx.message.author
+        pfpi = author.avatar_url_as
+
+        asset = pfpi(size=512)
         data = BytesIO(await asset.read())
         pfp = Image.open(data)
 

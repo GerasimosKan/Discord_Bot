@@ -15,7 +15,7 @@ class MemeGen(commands.Cog):
 
 #MyID Command
     @commands.command(aliases=['id', 'ID'])
-    async def MyID(self, member: discord.Member):
+    async def MyID(self, ctx):
 
         img = Image.open('./images/id.jpg') #image
 
@@ -23,7 +23,10 @@ class MemeGen(commands.Cog):
         #text= 
         #draw.text((356,112), text, (0, 0, 0,))
         
-        asset = member.avatar_url_as(size=512)
+        author = ctx.message.author
+        pfpi = author.avatar_url_as
+
+        asset = pfpi(size=512)
         data = BytesIO(await asset.read())
         pfp = Image.open(data)
 
