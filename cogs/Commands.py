@@ -8,7 +8,7 @@ class Commands(commands.Cog):
 
 
 #What Did That Message Say
-    @commands.command(name="snipe")
+    @commands.command(aliases=["rv"], name="snipe")
     async def snipe(self, ctx):
         """A command to snipe delete messages."""
         if not self.last_msg:  # on_message_delete hasn't been triggered since the bot started
@@ -20,6 +20,12 @@ class Commands(commands.Cog):
 
         embed = discord.Embed(title=f"Message from {author}", description=content)
         await ctx.send(embed=embed)
+
+
+    @commands.command(aliases=["cl"])
+    async def clear(ctx, amount=10):
+        await ctx.channel.purge(limit=amount)
+
 
 def setup(bot):
     bot.add_cog(Commands(bot))
