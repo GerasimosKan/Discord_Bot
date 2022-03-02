@@ -1,11 +1,12 @@
 #Discord Defaults
-Channel= 725328814082621471 #546662624243220494
-Role= 725344538092372028 #546665144822923265
+Channel= 546662624243220494
+Role= 546665144822923265
 
 #Custom Status
 lista = [
         "Μαινόμενη άβυσσος",
-        "Με κάτι γύφτους", 
+        "Με κάτι γύφτους",
+        "Ουράνιο τόξο 6 | Πολιορκία",
         "Φαράγγι Των Επικαλεστών", 
         "Grand Theft Auto: San Andreas",
         "Counter-Strike: Global Offensive » Inferno"
