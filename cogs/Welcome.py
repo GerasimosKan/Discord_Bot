@@ -25,7 +25,7 @@ class Welcome(commands.Cog):
         channel = self.bot.get_channel(Channel)
         role = get(guild.roles, id=Role)
 
-        img = Image.open('./images/id.jpg') #image
+        img = Image.open('Discord_Bot/images/id.jpg') #image
         
         author = ctx.message.author
         pfpi = author.avatar_url_as

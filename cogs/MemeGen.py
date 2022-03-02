@@ -17,7 +17,7 @@ class MemeGen(commands.Cog):
     @commands.command(aliases=['id', 'ID'])
     async def MyID(self, ctx):
 
-        img = Image.open('./images/id.jpg') #image
+        img = Image.open('Discord_Bot/images/id.jpg') #image
 
         #draw = ImageDraw.Draw(img)
         #text= 
