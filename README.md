@@ -21,7 +21,7 @@ Feel free to do both  :wink::upside_down_face:
 To invite the Bot to your server simply click the following link \
 > for better experience leave the permissions as is
 
-:link: : https://rb.gy/tjxvqm
+:link: : [Invite Link](https://discord.com/oauth2/authorize?client_id=590918903778246656&scope=bot&permissions=1644972474359)
 ## :desktop_computer: Built with
 
 - [Python](https://www.python.org/)
