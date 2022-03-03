@@ -12,6 +12,8 @@ Feel free to do both  :wink::upside_down_face:
 ## :bookmark_tabs: Roadmap
 
 - play music from spotify
+- New Help command
+- Clear chat
 - Web GUI Control
 - Revoke deleted messages
 
