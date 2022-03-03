@@ -4,14 +4,14 @@ A simple Discord Bot that you can either invite to your server or copy the code 
 Feel free to do both  :wink::upside_down_face:
 ## :monocle_face: Features 
 
-- Play music
 - Welcomes new members and gives theme roles
 - Hand made memes
 
 
 ## :bookmark_tabs: Roadmap
 
-- play music from spotify
+- Play music
+- Play music from spotify
 - New Help command
 - Clear chat
 - Web GUI Control
