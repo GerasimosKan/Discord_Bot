@@ -20,13 +20,13 @@ Feel free to do both  :wink::upside_down_face:
 
 ## :rocket: Deployment
 
-To invite the Bot to your server simply click the following link \
+To invite the Bot to your server simply click the following link 
 > for better experience leave the permissions as is
 
 :link: : [Invite Link](https://discord.com/oauth2/authorize?client_id=590918903778246656&scope=bot&permissions=1644972474359)
 
 ## :books: Libraries
-> Requires Python3 \
+> Requires Python3 
 
 Install Libraries
 
