@@ -25,6 +25,7 @@ To invite the Bot to your server simply click the following link
 
 :link: : [Invite Link](https://discord.com/oauth2/authorize?client_id=590918903778246656&scope=bot&permissions=1644972474359)
 
+
 ## :books: Libraries
 > Requires Python3 
 
@@ -34,6 +35,7 @@ Install Libraries
   pip3 install discord
   pip3 install Pillow
 ```
+
 
 ## :desktop_computer: Built with
 
