@@ -49,7 +49,7 @@ Gerasimos Kanellatos
 - [github.com/GerasimosKan](https://github.com/GerasimosKan)
 ## :hammer_and_wrench: Support
 
-For support, DM me on [Discord](https://discord.com/users/546360303697395743)
+For support, DM me on [Discord](https://discord.com/channels/@me/917786010161655818)
 
 
 ## 
