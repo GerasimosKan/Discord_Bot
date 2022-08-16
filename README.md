@@ -32,7 +32,13 @@ To invite the Bot to your server simply click the following link
 Install Libraries
 
 ```bash
-  pip3 install discord
+  python3 -m pip install -U discord.py[voice]
+  pip3 install Pillow
+```
+
+For a Debian-based system
+```bash
+  apt install libffi-dev libnacl-dev python3-dev
   pip3 install Pillow
 ```
 
