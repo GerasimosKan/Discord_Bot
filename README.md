@@ -34,6 +34,7 @@ Install Libraries
 ```bash
   python3 -m pip install -U discord.py[voice]
   pip3 install Pillow
+  pip3 install tk
 ```
 
 For a Debian-based system, the following command will get dependencies:
