@@ -36,10 +36,9 @@ Install Libraries
   pip3 install Pillow
 ```
 
-For a Debian-based system
+For a Debian-based system, the following command will get dependencies:
 ```bash
   apt install libffi-dev libnacl-dev python3-dev
-  pip3 install Pillow
 ```
 
 
