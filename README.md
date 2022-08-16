@@ -23,7 +23,7 @@ Feel free to do both  :wink::upside_down_face:
 To invite the Bot to your server simply click the following link 
 > for better experience leave the permissions as is
 
-:link: : [Invite Link](https://discord.com/oauth2/authorize?client_id=590918903778246656&scope=bot&permissions=1644972474359)
+:link: : [Invite Link](https://discord.com/oauth2/authorize?client_id=590918903778246656&scope=bot&permissions=8)
 
 
 ## :books: Libraries
