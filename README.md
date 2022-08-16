@@ -27,7 +27,7 @@ To invite the Bot to your server simply click the following link
 
 
 ## :books: Libraries
-> Requires Python3 
+> Requires Python 3.5.3 or higher
 
 Install Libraries
 
