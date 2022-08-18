@@ -35,12 +35,15 @@ Install Libraries
   python3 -m pip install -U discord.py[voice]
   pip3 install Pillow
   pip3 install tk-dev
+  pip3 install PyNaCL
+  pip3 install ffmpeg
 ```
 
 For a Debian-based system, the following command will get dependencies:
 ```bash
   apt install libffi-dev libnacl-dev python3-dev
   apt-get install python-tk python3-tk tk-dev
+  apt install ffmpeg
 ```
 
 
