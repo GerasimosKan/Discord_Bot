@@ -19,8 +19,8 @@ class Commands(commands.Cog):
         self.bot = bot
 
 #Purge Command
-    @commands.command(aliases=["purge", "delete"], title="Purge", description=f"Purges channels messages")
-    async def clear(self, ctx, ammount=13):
+    @commands.command(aliases=["delete"], title="Purge", description=f"Purges channels messages")
+    async def purge(self, ctx, ammount=13):
         """Purges channel messages"""
 
         if(not ctx.author.guild_permissions.manage_messages):
