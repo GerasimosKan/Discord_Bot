@@ -37,6 +37,7 @@ Install Libraries
   pip3 install tk-dev
   pip3 install PyNaCL
   pip3 install ffmpeg
+  pip3 install youtube_dl --no-warn-script-location
 ```
 
 For a Debian-based system, the following command will get dependencies:
