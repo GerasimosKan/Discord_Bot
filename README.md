@@ -6,14 +6,13 @@ Feel free to do both  :wink::upside_down_face:
 
 - Welcomes new members and gives theme roles
 - Hand made memes
-
+- New Help command
+- Clear chat
 
 ## :bookmark_tabs: Roadmap
 
 - Play music
 - Play music from spotify
-- New Help command
-- Clear chat
 - Web GUI Control
 - Revoke deleted messages
 
