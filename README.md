@@ -7,6 +7,7 @@ Feel free to do both  :wink::upside_down_face:
 - Welcomes new members and gives theme roles
 - Hand made memes
 - New Help command
+-Auto responds
 - Clear chat
 
 ## :bookmark_tabs: Roadmap
