@@ -64,6 +64,33 @@ class Commands(commands.Cog):
 
 
 
+#Ptixio Command
+    @commands.command(aliases=["paper","ptixio"])
+    async def Certificate(self, ctx):
+        """Ptixio"""
+
+        img = Image.open('/home/pi/Discord_Bot/images/paper.png') #image
+
+        #draw = ImageDraw.Draw(img)
+        #text= 
+        #draw.text((356,112), text, (0, 0, 0,))
+        
+        author = ctx.message.author
+        pfpi = author.avatar_url_as
+
+        asset = pfpi(size=512)
+        data = BytesIO(await asset.read())
+        pfp = Image.open(data)
+
+        pfp = pfp.resize((200,200)) #border size
+        img.paste(pfp, (430,253)) #image paste location
+
+        img.save("paper.png")
+
+        await ctx.send(file = discord.File("paper.png"))
+
+
+
 
 
 def setup(bot):
