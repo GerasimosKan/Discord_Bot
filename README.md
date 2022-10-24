@@ -13,6 +13,7 @@ Feel free to do both  :wink::upside_down_face:
 
 ## :bookmark_tabs: Roadmap
 
+- Docker
 - Play music from spotify
 - Web GUI Control
 - Revoke deleted messages
