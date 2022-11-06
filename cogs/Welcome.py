@@ -22,7 +22,7 @@ class Welcome(commands.Cog):
         channel = self.bot.get_channel(Channel)
         role = discord.utils.get(member.guild.roles, id=Role)
 
-        img = Image.open('./images/id.jpg')  # image
+        img = Image.open('/images/id.jpg')  # image
         asset = member.avatar_url_as(size=512)
         data = BytesIO(await asset.read())
         pfp = Image.open(data)
@@ -37,5 +37,5 @@ class Welcome(commands.Cog):
         await member.add_roles(role)
 
 
-def setup(bot):
-    bot.add_cog(Welcome(bot))
+async def setup(bot):
+    await bot.add_cog(Welcome(bot))

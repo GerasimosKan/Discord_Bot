@@ -1,5 +1,6 @@
 import os
 import discord
+import asyncio
 
 from os import system
 from subprocess import call
@@ -20,18 +21,10 @@ bot.remove_command('help')
 # """ --- COGS HANDLING --- """
 
 
-@bot.command
-async def load(ctx, extension):
-    bot.load_extension(f'cogs.{extension}')
-
-
-@bot.command
-async def unload(ctx, extension):
-    bot.unload_extension(f'cogs.{extension}')
-
-for filename in os.listdir('./cogs'):
-    if filename.endswith('.py'):
-        bot.load_extension(f'cogs.{filename[:-3]}')
+async def load():
+    for filename in os.listdir('./cogs'):
+        if filename.endswith('.py'):
+            await bot.load_extension(f'cogs.{filename[:-3]}')
 
 # """ --- END COGS HANDLING --- """
 
@@ -47,4 +40,8 @@ async def on_ready():
     print(f'I have logged in as {bot.user}')
 
 
-bot.run(TOKEN)
+async def main():
+    await load()
+    await bot.start(TOKEN)
+
+asyncio.run(main())

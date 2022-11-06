@@ -11,7 +11,7 @@ class RespondLogic(commands.Cog):
 
         if message.content == "gay":
             await message.channel.send(f"{message.author.mention} gamo tin mana sou")
-        
 
-def setup(bot):
-    bot.add_cog(RespondLogic(bot))
+
+async def setup(bot):
+    await bot.add_cog(RespondLogic(bot))
