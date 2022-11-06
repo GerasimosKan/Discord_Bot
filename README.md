@@ -13,6 +13,7 @@ Feel free to do both  :wink::upside_down_face:
 
 ## :bookmark_tabs: Roadmap
 
+- Docker
 - Play music from spotify
 - Web GUI Control
 - Revoke deleted messages
@@ -43,7 +44,7 @@ Install Libraries
 For a Debian-based system, the following command will get dependencies:
 ```bash
   apt install libffi-dev libnacl-dev python3-dev
-  apt-get install python-tk python3-tk tk-dev
+  apt install python-tk python3-tk tk-dev
   apt install ffmpeg
 ```
 
