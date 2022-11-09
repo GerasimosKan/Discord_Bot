@@ -4,16 +4,16 @@ A simple Discord Bot that you can either invite to your server or copy the code 
 Feel free to do both  :wink::upside_down_face:
 ## :monocle_face: Features 
 
+- Docker
 - Welcomes new members and gives theme roles
+- Custom Status
 - Hand made memes
 - New Help command
-- Play music
 - Auto responds
 - Clear chat
 
 ## :bookmark_tabs: Roadmap
-
-- Docker
+- Play music
 - Play music from spotify
 - Web GUI Control
 - Revoke deleted messages
