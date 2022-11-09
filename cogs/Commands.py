@@ -42,7 +42,7 @@ class Commands(commands.Cog):
     async def MyID(self, ctx):
         """Blepeis tin tautotita sou"""
 
-        img = Image.open('/images/id.jpg')  # image
+        img = Image.open('./images/id.jpg')  # image
 
         #draw = ImageDraw.Draw(img)
         # text=
@@ -69,7 +69,7 @@ class Commands(commands.Cog):
     async def Certificate(self, ctx):
         """Ptixio"""
 
-        img = Image.open('/images/paper.png')  # image
+        img = Image.open('./images/paper.png')  # image
 
         #draw = ImageDraw.Draw(img)
         # text=
