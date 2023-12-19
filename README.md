@@ -53,6 +53,7 @@ For a Debian-based system, the following command will get dependencies:
 
 - [Python](https://www.python.org/)
 - [Discord.py](https://discordpy.readthedocs.io/)
+- [Docker](https://www.docker.com/)
 
 
 ## :black_nib: Authors
