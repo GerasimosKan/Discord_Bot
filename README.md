@@ -7,7 +7,7 @@ Feel free to do both  :wink::upside_down_face:
 - Docker
 - Welcomes new members and gives theme roles
 - Custom Status
-- Hand made memes
+- Hand-made memes
 - New Help command
 - Auto responds
 - Clear chat
@@ -28,25 +28,7 @@ To invite the Bot to your server simply click the following link
 
 
 ## :books: Libraries
-> Requires Python 3.5.3 or higher
-
-Install Libraries
-
-```bash
-  python3 -m pip install -U discord.py[voice]
-  pip3 install Pillow
-  pip3 install tk-dev
-  pip3 install PyNaCL
-  pip3 install ffmpeg
-  pip3 install youtube_dl --no-warn-script-location
-```
-
-For a Debian-based system, the following command will get dependencies:
-```bash
-  apt install libffi-dev libnacl-dev python3-dev
-  apt install python-tk python3-tk tk-dev
-  apt install ffmpeg
-```
+> Requires Python 3.10.9
 
 
 ## :desktop_computer: Built with
