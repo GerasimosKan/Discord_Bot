@@ -5,15 +5,15 @@ Feel free to do both  :wink::upside_down_face:
 ## :monocle_face: Features 
 
 - Docker
-- Welcomes new members and gives theme roles
 - Custom Status
 - Hand-made memes
 - New Help command
-- Auto responds
 - Clear chat
 
 ## :bookmark_tabs: Roadmap
 - Play music
+- Welcomes new members and gives theme roles
+- Auto responds
 - Play music from spotify
 - Web GUI Control
 - Revoke deleted messages
@@ -25,10 +25,6 @@ To invite the Bot to your server simply click the following link
 > for better experience leave the permissions as is
 
 :link: : [Invite Link](https://discord.com/oauth2/authorize?client_id=590918903778246656&scope=bot&permissions=8)
-
-
-## :books: Libraries
-> Requires Python 3.10.9
 
 
 ## :desktop_computer: Built with
