@@ -1,12 +1,19 @@
-import discord
 import random
 
-from GlobalVar import lista
+import discord
 from discord.ext import commands, tasks
+
+lista = [
+    "Μαινόμενη άβυσσος",
+    "Με κάτι γύφτους",
+    "Ουράνιο τόξο 6 | Πολιορκία",
+    "Φαράγγι Των Επικαλεστών",
+    "Grand Theft Auto: San Andreas",
+    "Counter-Strike: Global Offensive » Inferno",
+]
 
 
 class Status(commands.Cog):
-
     def __init__(self, bot):
         self.bot = bot
 
@@ -21,5 +28,5 @@ class Status(commands.Cog):
         self.change_status.start()
 
 
-async def setup(bot):
-    await bot.add_cog(Status(bot))
+def setup(bot):
+    bot.add_cog(Status(bot))

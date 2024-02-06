@@ -1,6 +1,2 @@
-discord.py[voice]
-Pillow
-PyNaCL
-ffmpeg
-jinja2
-youtube_dl
+discord.py[voice]==1.7.3
+Pillow==8.3.2

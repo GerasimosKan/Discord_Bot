@@ -1,10 +1,20 @@
-FROM python:3
+# Use an official Python runtime as a parent image
+FROM python:3.9
 
-WORKDIR ./
+# Set the working directory to /app
+WORKDIR /app
 
-COPY requirements.txt ./requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Copy the current directory contents into the container at /app
+COPY . /app/
 
-COPY . .
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python3", "main.py" ]
+# Make port 8949 available to the world outside this container
+EXPOSE 8949
+
+# Define environment variable
+#ENV BOT_TOKEN=NTkwOTE4OTAzNzc4MjQ2NjU2.G3pVYn.F3XrcVInVoal4wErb_mWfK3p2LiA6N_neUD41Y
+
+# Run main.py when the container launches
+CMD ["python", "app/main.py"]
