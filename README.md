@@ -9,10 +9,10 @@ Feel free to do both  :wink::upside_down_face:
 - Hand-made memes
 - New Help command
 - Clear chat
+- Welcomes new members and gives theme roles
 
 ## :bookmark_tabs: Roadmap
 - Play music
-- Welcomes new members and gives theme roles
 - Auto responds
 - Play music from spotify
 - Web GUI Control
