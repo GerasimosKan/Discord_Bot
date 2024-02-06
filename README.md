@@ -5,10 +5,10 @@ Feel free to do both  :wink::upside_down_face:
 ## :monocle_face: Features 
 
 - Docker
+- Clear chat
 - Custom Status
 - Hand-made memes
 - New Help command
-- Clear chat
 - Welcomes new members and gives theme roles
 
 ## :bookmark_tabs: Roadmap
