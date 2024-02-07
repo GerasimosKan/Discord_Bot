@@ -1,2 +1,5 @@
 discord.py[voice]==1.7.3
 Pillow==8.3.2
+openai==1.11.1
+youtube_dl
+spotipy==2.18.0
