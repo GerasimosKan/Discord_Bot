@@ -1,2 +1,2 @@
-docker stop elas-app-container && docker rm elas-app-container || true && docker build -t elas_app:latest . && docker run -d -p 8949:8949 --restart always --name elas-app-container elas_app:latest && docker system prune -a -f
+cd Discord_ELAS_v3 && docker stop elas-app-container && docker rm elas-app-container || true && docker build -t elas_app:latest . && docker run -d -p 8949:8949 --restart always --name elas-app-container elas_app:latest && docker system prune -a -f && cd ..
 
