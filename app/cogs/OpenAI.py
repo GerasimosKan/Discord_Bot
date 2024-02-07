@@ -56,5 +56,5 @@ class AI(commands.Cog):
 
 
 def setup(bot):
-    api_key = "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"
+    api_key = "API-KEY"
     bot.add_cog(AI(bot, api_key))
