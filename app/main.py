@@ -3,6 +3,9 @@ import os
 import discord
 from discord.ext import commands
 
+# Load the bot token from the environment
+bot_token = os.getenv("DISCORD_BOT_TOKEN")
+
 # Create the bot instance with a command prefix
 intents = discord.Intents.default()
 intents.members = True
@@ -17,7 +20,6 @@ for filename in os.listdir("app/cogs"):
         try:
             # Load each cog using load_extension
             bot.load_extension(cog_name)
-
         except Exception as e:
             print(f"Failed to load cog {cog_name}: {e}")
 
@@ -38,6 +40,8 @@ async def on_ready():
     print(f"Logged in as {bot.user.name} ({bot.user.id})")
 
 
-# Run the bot with the specified token
-bot_token = "Token"
-bot.run(bot_token)
+# Run the bot if the token is available
+if bot_token:
+    bot.run(bot_token)
+else:
+    print("Error: DISCORD_BOT_TOKEN not found in environment variables.")
