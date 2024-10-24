@@ -1,29 +1,28 @@
-# Use a minimal base image
+# First stage: Install dependencies
 FROM python:3.9-slim AS builder
 
-# Set the working directory to /app
+# Set the working directory
 WORKDIR /app
 
-
-# Install system dependencies
+# Install system dependencies and Python build tools
 RUN apt-get update && apt-get install -y \
     build-essential \
     libffi-dev \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy only requirements.txt initially to leverage Docker caching
+# Copy only requirements.txt to leverage Docker cache
 COPY requirements.txt .
 
-# Install required Python packages with specific versions
+# Install Python dependencies in the builder stage
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Second stage, copy only necessary files from builder stage
+# Second stage: Create the final image
 FROM python:3.9-slim
 
 WORKDIR /app
 
-# Install system dependencies
+# Install necessary system dependencies
 RUN apt-get update && apt-get install -y \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
@@ -34,8 +33,8 @@ COPY --from=builder /usr/local/lib/python3.9/site-packages/ /usr/local/lib/pytho
 # Copy the rest of the application
 COPY . .
 
-# Make port 8949 available to the world outside this container
+# Expose the necessary port
 EXPOSE 8949
 
-# Run main.py when the container launches
+# Command to run your application (make sure this is the correct path)
 CMD ["python", "app/main.py"]
