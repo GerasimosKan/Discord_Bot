@@ -32,8 +32,5 @@ COPY --from=builder /usr/local/lib/python3.9/site-packages/ /usr/local/lib/pytho
 # Copy the application code
 COPY . .
 
-# Expose the port your application uses (if your bot requires one)
-EXPOSE 8949
-
 # Set the entrypoint to your bot's main script
 CMD ["python", "app/main.py"]
