@@ -9,7 +9,7 @@ Feel free to do both  :wink::upside_down_face:
 - Custom Status
 - Hand-made memes
 - New Help command
-- Auto responds with OpenAI
+- Auto responds with AI
 - Welcomes new members and gives theme roles
 
 ## :bookmark_tabs: Roadmap
