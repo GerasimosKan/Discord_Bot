@@ -1,12 +1,12 @@
+import aiohttp
 import discord
 from discord.ext import commands
-from openai import APIConnectionError, OpenAI
 
 
 class AI(commands.Cog):
-    def __init__(self, bot, api_key):
+    def __init__(self, bot, server_url):
         self.bot = bot
-        self.openai_client = OpenAI(api_key=api_key)
+        self.server_url = server_url
 
     @commands.command(
         name="- @ΕΛ.ΑΣ <message> -!",
@@ -32,29 +32,28 @@ class AI(commands.Cog):
         if self.bot.user.mentioned_in(message):
             user_input = message.content.replace(f"<@!{self.bot.user.id}>", "").strip()
 
-            if user_input.lower().startswith("api"):
+            async with aiohttp.ClientSession() as session:
                 try:
-                    chat_completion = await self.openai_client.chat.completions.create(
-                        messages=[
-                            {
-                                "role": "user",
-                                "content": user_input,
-                            }
-                        ],
-                        model="gpt-3.5-turbo",
-                    )
-                    response = chat_completion.choices[0].message.content
-                    await message.channel.send(response)
-                except APIConnectionError:
+                    async with session.post(
+                        f"{self.server_url}/api/generate",
+                        json={"prompt": user_input, "model": "default"},
+                    ) as response:
+                        if response.status == 200:
+                            data = await response.json()
+                            response_text = data.get(
+                                "response", "No response received from server."
+                            )
+                            await message.channel.send(response_text)
+                        else:
+                            await message.channel.send(
+                                f"Sorry, there was an issue with the server (status code: {response.status}). Please try again later."
+                            )
+                except aiohttp.ClientError as e:
                     await message.channel.send(
-                        "Sorry, there was an issue with the server. Please try again later."
+                        f"Sorry, there was a connection issue: {str(e)}. Please try again later."
                     )
-            else:
-                await message.channel.send(
-                    f"{message.author.mention}, Sorry, there was an issue with the api :satellite:. Please try again later."
-                )
 
 
 def setup(bot):
-    api_key = "API--KEY"
-    bot.add_cog(AI(bot, api_key))
+    server_url = "http://server.kanellatos.gr"
+    bot.add_cog(AI(bot, server_url))
