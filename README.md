@@ -9,13 +9,13 @@ Feel free to do both  :wink::upside_down_face:
 - Custom Status
 - Hand-made memes
 - New Help command
-- Auto responds with AI
+- Play music
 - Welcomes new members and gives theme roles
 
 ## :bookmark_tabs: Roadmap
-- Play music
 - Play music from spotify
-- Web GUI Control
+- Web GUI Control (On works)
+- Auto responds with AI
 - Revoke deleted messages
 
 
