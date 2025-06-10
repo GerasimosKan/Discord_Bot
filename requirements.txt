@@ -1,5 +1,7 @@
-discord.py[voice]==1.7.3
-Pillow==10.3.0
-openai==1.11.1
-youtube_dl
-spotipy==2.18.0
+discord.py[voice]
+Pillow
+flask
+requests
+aiohttp
+jsons
+yt-dlp[default]

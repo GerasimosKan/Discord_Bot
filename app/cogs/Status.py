@@ -1,5 +1,4 @@
 import random
-
 import discord
 from discord.ext import commands, tasks
 
@@ -12,7 +11,6 @@ lista = [
     "Counter-Strike: Global Offensive » Inferno",
 ]
 
-
 class Status(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -24,9 +22,7 @@ class Status(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        await self.bot.wait_until_ready()
         self.change_status.start()
 
-
-def setup(bot):
-    bot.add_cog(Status(bot))
+async def setup(bot):
+    await bot.add_cog(Status(bot))

@@ -75,5 +75,5 @@ class CustomHelp(commands.Cog):
         await self.send_embed(ctx, emb)
 
 
-def setup(bot):
-    bot.add_cog(CustomHelp(bot))
+async def setup(bot):
+    await bot.add_cog(CustomHelp(bot))

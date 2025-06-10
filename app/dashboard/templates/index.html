@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - {{ bot_name }}</title>
+    <!-- Automatically reference the static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Dashboard for {{ bot_name }}</h1>
+    <!-- Automatically reference the static image -->
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Bot Logo">
+    <p>More content goes here...</p>
+</body>
+</html>
