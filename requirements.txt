@@ -5,3 +5,4 @@ requests
 aiohttp
 jsons
 yt-dlp[default]
+python-dotenv

@@ -4,6 +4,9 @@ import traceback
 import discord
 from discord.ext import commands
 import asyncio
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class MyBot(commands.Bot):
     def __init__(self):
@@ -57,8 +60,8 @@ class MyBot(commands.Bot):
 async def main():
     bot = MyBot()
     print("🔥 Starting bot...")
+    token = os.getenv("DISCORD_TOKEN")
     async with bot:
-        await bot.start("TOKEN_PASTE")
-
+        await bot.start(token)
 if __name__ == "__main__":
     asyncio.run(main())

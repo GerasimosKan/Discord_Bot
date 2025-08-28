@@ -18,13 +18,12 @@ class Dashboard(commands.Cog):
         @self.flask_app.route('/')
         def home():
             return render_template('index.html', bot_name=self.bot.user.name)
-
         self.start_flask_server()
 
     def start_flask_server(self):
-        """Runs the Flask web server in a separate thread."""
         def run_flask():
-            self.flask_app.run(host='0.0.0.0', port=25560, debug=False, use_reloader=False)
+            port = int(os.getenv("DASHBOARD_PORT", "8080"))
+            self.flask_app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
 
         flask_thread = threading.Thread(target=run_flask)
         flask_thread.daemon = True
